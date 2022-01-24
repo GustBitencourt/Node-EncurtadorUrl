@@ -12,4 +12,5 @@ export class URL extends Typegoose {
 	shortURL: string
 }
 
+//model pra manipular os dados
 export const URLModel = new URL().getModelForClass(URL)
