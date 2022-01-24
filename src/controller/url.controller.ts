@@ -29,6 +29,5 @@ export class UrlController {
         //redirecionar pra url original
         res.redirect(url.originURL)
 
-
     }
 }
