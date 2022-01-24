@@ -15,4 +15,20 @@ export class UrlController {
 
         res.json({ originURL, hash, shortURL});
     }
+
+    public async redirect(req: Request, res: Response): Promise<void> {
+        //pegar hash da url
+        const { hash } = req.params;
+        //encontrar a url original através do hash
+        const url = {
+            "originURL":"mongodb+srv://GustBitencourt:<gustavo1>@encurtadorurl.2n6ol.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+            "hash":"6ibDM7RkG",
+            "shortURL": "http://localhost:5000/6ibDM7RkG"
+        }
+
+        //redirecionar pra url original
+        res.redirect(url.originURL)
+
+
+    }
 }
